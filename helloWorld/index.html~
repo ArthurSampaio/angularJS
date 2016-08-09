@@ -1,0 +1,18 @@
+<html ng-app="helloWorld">
+<head>
+	<title>Hello World</title>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script>
+		angular.module("helloWorld", []);
+		angular.module("helloWorld").controller("helloWorldCtrl", function ($scope) {
+			$scope.message = "Hello Woasdasdasdrld";
+		});
+	</script>
+</head>
+<body ng-controller="helloWorldCtrl">
+	<div>
+		{{message}}
+	</div>
+</body>
+</html>
+
