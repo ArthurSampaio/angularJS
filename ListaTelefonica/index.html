@@ -13,6 +13,7 @@
 
 		.table{
 			margin-top: 20px;
+
 		}
 
 		.form-control{
@@ -30,6 +31,11 @@
 				{nome: "Maria", telefone: "99348888"},
 				{nome: "Ana",   telefone: "99998888"}	
 			];
+				
+			$scope.adicionarContato = function (contato){
+				$scope.contatos.push(angular.copy(contato)); //Adiciona no fim do array			
+				delete $scope.contato			
+			}
 
 		});
 	</script>	
@@ -41,16 +47,18 @@
 			<tr>
 				<th>Nome</th>
 				<th>Telefone</th>
-			</tr>	
+			</tr>
+			<!--ngRepeat itera  -->	
 			<tr ng-repeat = "contato in contatos">
 				<td>{{contato.nome}}</td>
 				<td>{{contato.telefone}}</td>
 			</tr>
 		</table>
-		<hr/>
-		<input class = "form-control" type = "text" ng-model = "nome"/>
-		<input class = "form-control" type = "text" ng-model = "telefone"/>
-		<button ng-click = "adicionarContato()">Adicionar Contato</button>
+		<hr/>													<!--contato é uma entidade abstrata-->
+		<input class = "form-control" type = "text" ng-model = "contato.nome" placeholder = "Nome"/>
+		<input class = "form-control" type = "text" ng-model = "contato.telefone" placeholder = "Telefone"/>
+		<!-- passar como parâmetro nome e telefone-->	
+		<button class = "btn btn-primary btn-block" ng-click = "adicionarContato(contato)">Adicionar Contato</button>
 	</div>
 </body>
 </html>
