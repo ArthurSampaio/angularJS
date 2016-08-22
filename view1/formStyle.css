@@ -1,0 +1,15 @@
+.nav-tab a:hover{
+	color: #000000;
+	
+}
+
+.container{
+	.margin:auto;
+}
+
+.tab-container{
+    border: 1px solid #ddd;
+    width: 1000px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
