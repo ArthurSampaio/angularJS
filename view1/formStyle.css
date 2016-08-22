@@ -1,10 +1,12 @@
 .nav-tab a:hover{
 	color: #000000;
-	
+	background: #000000;
+
 }
 
+
 .container{
-	.margin:auto;
+	margin:auto;
 }
 
 .tab-container{
@@ -12,4 +14,9 @@
     width: 1000px;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+.formColor{
+	color: #428bca;
+	font-color: #428bca;
 }
