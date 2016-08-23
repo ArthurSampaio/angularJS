@@ -20,3 +20,8 @@
 	color: #428bca;
 	font-color: #428bca;
 }
+
+.container-tab{
+	position: relative;
+	right: -50px;
+}
