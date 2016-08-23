@@ -31,3 +31,14 @@
    word-wrap: break-word;
    color: black;
 }
+
+#buttonNext{
+  cursor: pointer;
+  font-size: 15px;
+
+}
+
+#buttonNext:hover{
+	background-color: #428bca;
+	color: white;
+}

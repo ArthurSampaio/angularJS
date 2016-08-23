@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" ng-app="answerQuestionary">
 <head>
 		
 	<meta charset="utf-8">
@@ -10,27 +10,20 @@
 	<!--Loading my style css-->
 	<link rel="stylesheet" type="text/css" href="formStyle.css">
 	<!--Loading angularjs-->	
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>		
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>	
+	<!--Loading my code in angularJs-->
+	<script src="answerQuestionary.js"></script> 
 
 
 </head>
-<body>
+<body ng-controller="formCtrl">
 	<!--barra de navegacao-->
-	<nav class="navbar navbar-dark bg-inverse">
-		<nav class="navbar navbar-light bg-faded">
-		  <ul class="nav navbar-nav">
-			<li class="nav-item">
-			  <a class="nav-link" href="#">Primeira Parte</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="#">Segunda Parte</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="#">Terceira Parte</a>
-			</li>
-		  </ul>
-		</nav>
-	</nav>
+	<!-- Centered Tabs -->
+	<ul class="nav nav-tabs">
+	  <li class="active"><a href="#">Primeira Parte</a></li>
+	  <li><a href="#">Segunda Parte</a></li> 
+	  <li><a href="#">Terceira Parte</a></li>
+	</ul>  
 	<!--Comeco do questionario-->
 	
 	<div class="container formLine">
@@ -42,39 +35,35 @@
 				<h1>Questionário de Avaliação da Docência</h1>
 				
 				<form class="form" role="form">
-					<div><!--NGREPEAT VEM AQUI-->
+					<div ng-repeat="question in questions">
 						<div class="form-group">
 							<div class="row">
-								<label for="email">1. Qual é a pergunta?</label>
-								<div class=".col-sm-3">
-										<div>
-											 <div class="radio">
+								<label for="email">{{question}}</label>
+								<div class="row">	
+									<div class="col-md-6">
+										<div ng-repeat="answer in answers">	
+											<div class="radio">
 												  <label class="textOverflow">
-													<input type="radio" name="optionsRadios" id="resposta1" value="option1" checked>
-													Resposta 1
+													  <input type="radio" name="optradio">
+													  {{answer}}
 												  </label>
-												</div>
-												<div class="radio">
-												  <label class="textOverflow">
-													<input type="radio" name="optionsRadios" id="resposta2" value="option2">
-													Resposta 2
-												  </label>
-												</div>
-												<div class="radio disabled">
-												  <label>
-													<input type="radio" name="optionsRadios" id="numvaidar" value="option3" disabled>
-													Num vai da nao
-												  </label>
-												</div>
-										</div>
-									</div>									
+											</div>
+										</div>	
+									</div>
+									<div class="col-md-6">
+										<label for="comment">Comentários:</label>
+										<br>
+										<textarea class="form-control" rows="6" id="comment" placeholder="Comente!"></textarea>
+									</div>
 								</div>
-							</div>
+							</div>													
 						</div>
-						
+			
 					</div>
-					<!--TEXTAREA-->
-					
+			
+					<div class="text-right">
+						    <input type="button" class="btn btn-default"  value="Próximo" id = "buttonNext">
+					</div>
 					
 				</form>
 			</div>
@@ -83,7 +72,7 @@
 
 		
 
-
+	<footer class="text-center">Desenvolvido por Arthur Sampaio</footer>
 
 	</div>
 </body>
