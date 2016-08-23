@@ -9,14 +9,25 @@
 	margin:auto;
 }
 
-.tab-container{
+.tab-content{
     border: 1px solid #ddd;
     width: 1000px;
     padding-left: 50px;
     padding-right: 50px;
 }
 
-.formColor{
+.formLine{
 	color: #428bca;
 	font-color: #428bca;
+}
+
+.tabs-container {
+    position:relative;
+    right: -50px;
+}
+
+.textOverflow{
+   width: 800px;
+   word-wrap: break-word;
+   color: black;
 }
