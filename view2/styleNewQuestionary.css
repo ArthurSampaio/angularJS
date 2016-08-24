@@ -4,27 +4,6 @@
 
 }
 
-.container{
-	margin:auto;
-}
-
-.tab-content{
-    border: 1px solid #ddd;
-    width: 1000px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.formLine{
-	color: #428bca;
-	font-color: #428bca;
-}
-.nav-tab a:hover{
-	color: #000000;
-	background: #000000;
-
-}
-
 
 .container{
 	margin:auto;
