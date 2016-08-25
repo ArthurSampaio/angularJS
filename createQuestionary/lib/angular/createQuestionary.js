@@ -6,7 +6,8 @@ angular.module("createQuestionary").factory("formCreat", function() {
 
 	formCreat.getQuestion = function(){
 
-		var questions =["Os pré-requisitos assumidos pela disciplina foram adequados?", "Segunda Pergunta"];
+		var questions = ["Os pré-requisitos assumidos pela disciplina foram adequados?",
+			"Segunda Pergunta"];
 		return questions;
 	}
 
@@ -20,7 +21,7 @@ angular.module("createQuestionary").controller("formCreatCtrl",
 
 	var inicio = function(){
 		$scope.questions = formCreat.getQuestion();
-	};
+	};	
 
 	inicio();
 
