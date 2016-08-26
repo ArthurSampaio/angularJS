@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="eng" app="questionary">
+<html lang="eng" ng-app="questionary">
 <head>
 	<meta charset="utf-8">
 	<title>Novo Questionário</title>
@@ -8,29 +8,31 @@
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/newQuestionary.css">
 	<!--Loading angularJS-->
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>	
-	<scipt src="lib/angular/questionary.js"></script>
+	<script src="lib/angular/angular.js"></script>	
+	<script src="lib/angular/questionary.js"></script>
 
 
 </head>
 
-<body ng-controller="formCrtl">
+<body ng-controller="formCtrl">
 	<div class="container formLine">
 		<div class="tab-container">
 			<div class = "tab-content">
 				<h1>Novo Questionário</h1>
+				<p>{{ab}}</p>
 				<form class="form" role="form">
-					<table class="table">
+					<table class="table table-striped">
 						<thead class="thead-inverse">
 							<tr class="text-left">
 								<th>Questões</th>
 							</tr>
+						</thead>
 							<!--ng-repeat-->
 							<tr ng-repeat="question in questions">
 								<td><input type="checkbox"/></td>
 								<th>{{ question }}</th>
 							</tr>
-						</thead>
+						
 					</table>
 					<!--colocar os botões-->
 				</form>
