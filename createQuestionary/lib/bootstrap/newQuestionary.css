@@ -4,7 +4,6 @@
 
 }
 
-
 .container{
 	margin:auto;
 }
@@ -41,4 +40,17 @@
 #buttonNext:hover{
 	background-color: #428bca;
 	color: white;
+}
+
+.form-control{
+  margin-bottom: 8px;
+}
+
+.bottomAdd{
+  width: 200px;
+}
+
+.selected{
+  background-color: #99ccff;
+  color: white;
 }
