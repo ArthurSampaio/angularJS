@@ -1,0 +1,87 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.nav-tab a:hover{
+  color: #428bca;
+  background: #ffffff;
+
+}
+
+.container{
+  margin:auto;
+}
+
+.tab-content{
+    border: 1px solid #ddd;
+    width: 1000px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.formLine{
+  color: #428bca;
+  font-color: #428bca;
+}
+
+.tabs-container {
+    position:relative;
+    right: -50px;
+}
+
+.textOverflow{
+   width: 800px;
+   word-wrap: break-word;
+   color: black;
+}
+
+#buttonNext{
+  cursor: pointer;
+  font-size: 15px;
+
+}
+
+#buttonNext:hover{
+  background-color: #428bca;
+  color: white;
+}
+
+.form-control{
+  margin-bottom: 8px;
+}
+
+.bottomAdd{
+  width: 200px;
+}
+
+.selected{
+  background-color: #99ccff;
+  color: white;
+}
