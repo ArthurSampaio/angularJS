@@ -19,25 +19,28 @@ angular.module("myApp.view3", ['ngRoute'])
 		return questions;
 	}
 
-	formService.getType = function(){
-		var types = [{name: "Múltipla Escolha", category:"checkbox"},
-					 {name: "Escolha Única", category: "radio"},
-					 {name: "Apenas Texto", category: "text"}
+	formService.getTipo = function(){
+		var types = [{name: "Múltipla Escolha"},
+				 	{name: "Escolha Única"},
+				 	{name: "Apenas Texto"}
 					];
-		return types;			
+		return types;	
 	}
 
 	return formService;
 
 })
 
-.controller('View3Ctrl', function($scope, formService){
+.controller('View3Ctrl',function($scope, formService){
 		
 		var begin = function(){
 			$scope.questions = formService.getQuestions();
-			$scope.types = formService.getType();
+			$scope.types = formService.getTipo();
 		};
-	
+
+		
+
+
 		$scope.addQuestion = function(question){
 			$scope.questions.push(angular.copy(question)); //Adiciona no fim do array			
 			delete $scope.question
