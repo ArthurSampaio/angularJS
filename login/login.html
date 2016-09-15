@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+
+<html lang="eng" ng-app="questionary">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Sistema de Apoio Docente</title>
+	<!--Loading bootstrap-->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>	
+	<script src="login.js"></script>
+
+
+</head>
+
+<body>
+	<!--Header-->
+	<div class="container">
+		<div class="formLine panel panel-primary text-center">
+			<div class="row">
+				<div class="col-sm-2 col-xs-3">
+					<img src="img/brasaoUfcg.png">
+				</div>
+				<div class="col-sm-8 col-xs-8">	
+					<h1>Sistema de Apoio Docente</h1>	
+				</div>
+			
+			</div>	
+		</div>
+	</div>	
+
+	<div class="container panel panel-primary">
+		<!--Warning message-->
+		<div class="alert alert-warning">
+			<p class="lead">Aviso</p>
+			"Você não está conectado. Por favor, insira suas informações abaixo"
+		</div>	
+		<!--input the data user-->
+		<div class="tab-form">
+		  <form>
+		    <div class="form-group row">
+		      <label for="inputMatricula" class="col-sm-2 col-form-label">Matricula/Usuário</label>
+		      <div class="col-sm-10">
+		        <input type="email" class="form-control" id="inputMatricula" placeholder="Matricula">
+		      </div>
+		    </div>
+		    <div class="form-group row">
+		      <label for="inputSenha" class="col-sm-2 col-form-label">Senha</label>
+		      <div class="col-sm-10">
+		        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+		      </div>
+		    </div>
+		    <fieldset class="form-group row">
+		    	<!--For the radio's checks-->
+		      <legend class="col-form-legend col-sm-2"></legend>
+		      <div class="col-sm-10">
+		      	<!--Aluno-->
+		        <div class="form-check">
+		          <label class="form-check-label">
+		            <input class="form-check-input" type="radio" name="gridRadios" id="Aluno" value="option1" checked>
+		            Aluno
+		          </label>
+		        </div>
+		        <!--Professor-->
+		        <div class="form-check">
+		          <label class="form-check-label">
+		            <input class="form-check-input" type="radio" name="gridRadios" id="Professor" value="option2">
+		            Professor
+		          </label>
+		        </div>
+		        <!--Coordenação-->
+		        <div class="form-check">
+		          <label class="form-check-label">
+		            <input class="form-check-input" type="radio" name="gridRadios" id="Coordenacao" value="option3">
+		            Coordenação
+		          </label>
+		        </div>
+		        <!--Centro-->
+		        <div class="form-check">
+		          <label class="form-check-label">
+		            <input class="form-check-input" type="radio" name="gridRadios" id="Centro" value="option4">
+		            Centro
+		          </label>
+		        </div>	
+  
+		      </div>
+		    </fieldset>
+		    
+		    <div class="form-group row">
+		      <div class="col-sm-10">
+		        <button type="submit" class="btn btn-primary">Entrar</button>
+		      </div>
+		    </div>
+		  </form>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="well well-sm">
+				©2016 Desenvolvido pelo Grupo PETComputação
+				<address >
+					  <strong>Universidade Federal de Campina Grande.</strong><br>
+					  Rua Aprígio Veloso, S/N<br>
+					  Campina Grande, Brasil<br>
+					
+				</address>
+			</div>
+
+		<div>	
+	</footer>
+
+</body>
+</html>
