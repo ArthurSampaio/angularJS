@@ -42,7 +42,7 @@
 }
 
 .tab-content{
-    border: 1px solid #ddd;
+    border: 1px;
     width: 1000px;
     padding-left: 50px;
     padding-right: 50px;
